@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - oxiane.php
+    - oxiane.mysql
+    - oxiane.nginx
+    - oxiane.wordpress
+  tasks:
+    - name: ping your machine
+      ping: 
